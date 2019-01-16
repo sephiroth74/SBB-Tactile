@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SBB</string>
+    <string name="save">Save</string>
+    <string name="other_arriving_location">Other Arriving Location</string>
+    <string name="other_starting_location">Other Starting Location</string>
+</resources>

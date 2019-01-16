@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="SBB Tactile" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <com.example.sbb.widget.TactileLayout
+            android:id="@+id/tactileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.sbb.widget.TactileFixedGrid
+                android:id="@+id/others"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/grid">
+
+                <com.example.sbb.widget.TactileSimpleTextView
+                    android:id="@+id/button"
+                    style="@style/TactileSimpleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#999999"
+                    android:text="@string/other_starting_location"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.example.sbb.widget.TactileSimpleTextView
+                    android:id="@+id/button2"
+                    style="@style/TactileSimpleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#999999"
+                    android:text="@string/other_arriving_location"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.example.sbb.widget.TactileSimpleTextView
+                    android:id="@+id/buttonRecentsStart"
+                    style="@style/TactileSimpleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#AAAAAA"
+                    android:drawablePadding="6dp"
+                    android:drawableStart="@drawable/baseline_cached_black_18"
+                    android:text="Zurich"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+                <com.example.sbb.widget.TactileSimpleTextView
+                    android:id="@+id/buttonRecentsEnd"
+                    style="@style/TactileSimpleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#AAAAAA"
+                    android:drawablePadding="6dp"
+                    android:drawableStart="@drawable/baseline_cached_black_18"
+                    android:text="Lugano"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+                <com.example.sbb.widget.TactileSimpleTextView
+                    android:id="@+id/button5"
+                    style="@style/TactileSimpleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#BBBBBB"
+                    android:drawablePadding="6dp"
+                    android:drawableStart="@drawable/baseline_pin_drop_black_18"
+                    android:text="Lugano"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+                <com.example.sbb.widget.TactileSimpleTextView
+                    android:id="@+id/button6"
+                    style="@style/TactileSimpleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#BBBBBB"
+                    android:drawablePadding="6dp"
+                    android:drawableStart="@drawable/baseline_pin_drop_black_18"
+                    android:text="Bellinzona"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.33" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.66" />
+
+            </com.example.sbb.widget.TactileFixedGrid>
+
+            <com.example.sbb.widget.TactileGrid
+                android:id="@+id/grid"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                app:sbb_columns="4"
+                app:sbb_gap="1dp"
+                app:sbb_itemGrid_animationDuration="200"
+                app:sbb_itemGrid_padding="4dp"
+                app:sbb_itemGrid_strokeColor="#cccccc"
+                app:sbb_itemGrid_strokeWidth="1dp"
+                app:sbb_rows="4" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.55" />
+
+            <com.example.sbb.widget.TactileOverlay
+                android:id="@+id/overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.example.sbb.widget.TactileLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
